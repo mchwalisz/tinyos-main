@@ -89,9 +89,9 @@ implementation {
     S_XOSC_STARTED,
   } cc2420_control_state_t;
 
-  uint8_t m_channel;
+  uint8_t m_channel = CC2420_DEF_CHANNEL;
   
-  uint8_t m_tx_power;
+  uint8_t m_tx_power = CC2420_DEF_RFPOWER;
   
   uint16_t m_pan;
   
@@ -135,8 +135,6 @@ implementation {
     m_short_addr = call ActiveMessageAddress.amAddress();
     m_ext_addr = call LocalIeeeEui64.getId();
     m_pan = call ActiveMessageAddress.amGroup();
-    m_tx_power = CC2420_DEF_RFPOWER;
-    m_channel = CC2420_DEF_CHANNEL;
     
     m_ext_addr = call LocalIeeeEui64.getId();
     for (i = 0; i < 4; i++) {

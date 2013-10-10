@@ -87,7 +87,7 @@ implementation {
     S_XOSC_STARTED,
   } cc2420_control_state_t;
 
-  uint8_t m_channel;
+  uint8_t m_channel = LOGICAL_CHANNEL;
   
   uint8_t m_tx_power;
   
@@ -125,7 +125,7 @@ implementation {
     m_tx_power = CC2420_DEF_RFPOWER;
 	
     //m_channel = CC2420_DEF_CHANNEL;
-    m_channel = LOGICAL_CHANNEL;
+    // m_channel = LOGICAL_CHANNEL;
 	
 	
 //#if defined(CC2420_NO_ACKNOWLEDGEMENTS)

@@ -87,7 +87,7 @@ implementation {
     S_XOSC_STARTED,
   } cc2420_control_state_t;
 
-  uint8_t m_channel;
+  uint8_t m_channel = CC2420_DEF_RFPOWER;
   uint16_t m_pan;
   uint16_t m_short_addr;
   bool autoAckEnabled;
